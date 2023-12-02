@@ -8,21 +8,27 @@ import "swiper/css/navigation";
 import "swiper/css";
 
 const ProductSection = () => {
-  const arr = ["1", "2", "3", "4", "5" , "6" , "7" , "8" , "9"];
+  const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
   return (
-    <Swiper
-      modules={[Navigation]}
-      spaceBetween={8}
-      slidesPerView={6}
-      navigation
-    >
-      {arr.map((item, index) => (
-        <SwiperSlide key={index}>
-          <ProductCard />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div>
+      <h3 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
+        Recommended for you
+      </h3>
+
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={8}
+        slidesPerView={6}
+        navigation
+      >
+        {arr.map((item, index) => (
+          <SwiperSlide key={index}>
+            <ProductCard />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

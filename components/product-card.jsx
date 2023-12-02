@@ -4,26 +4,26 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="w-full max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow">
-      <div className="flex justify-center relative">
+    <div className="w-full max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
+      <div className="flex justify-center relative bg-gray-50 rounded-lg">
         <Image
-          src={"/product-1.avif"}
+          src={"/product-1.png"}
           width={200}
           height={350}
           alt="product image"
         />
-        <div className="absolute top-4 right-4 bg-gray-50/75 rounded-full cursor-pointer p-2">
-          <Heart size={24} className="text-gray-700" />
+        <div className="absolute top-4 right-4 bg-white shadow rounded-full cursor-pointer p-2">
+          <Heart size={20} className="text-gray-700" />
         </div>
         <div className="absolute bottom-4 left-0 right-0 px-4">
           <div className="flex justify-between items-center">
-            <div className="bg-gray-50/75 rounded-full cursor-pointer p-1 space-x-1 flex items-center">
+            <div className="bg-white rounded-full cursor-pointer px-3 py-1 space-x-1 flex items-center">
               <span className="text-gray-800 font-bold">4.4</span>
-              <Star size={20} />
+              <Star size={16} />
               <span className="text-gray-500 font-normal">{"(7)"}</span>
             </div>
-            <div className="bg-gray-50/75 rounded-full cursor-pointer p-2">
-              <ShoppingCart size={24} />
+            <div className="bg-white rounded-full cursor-pointer p-2">
+              <ShoppingCart size={20} />
             </div>
           </div>
         </div>
