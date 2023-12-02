@@ -127,7 +127,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © 2023 Company Name
           </p>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-center space-x-2">
             <Facebook />
             <Twitter />
             <Instagram />
