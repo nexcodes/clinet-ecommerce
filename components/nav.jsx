@@ -12,7 +12,10 @@ const Navbar = () => {
           <Target />
           <span className="font-bold text-lg">Logo</span>
         </div>
-        <div onClick={() => setIsMenuClosed((prev) => !prev)}>
+        <div
+          onClick={() => setIsMenuClosed((prev) => !prev)}
+          className="md:hidden"
+        >
           <Menu />
         </div>
         <div className="hidden md:flex space-x-4">
