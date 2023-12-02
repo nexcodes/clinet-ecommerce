@@ -16,14 +16,14 @@ const CategorySection = () => {
       className="relative group"
       modules={[Navigation]}
       spaceBetween={4}
-      slidesPerView={3}
+      slidesPerView={2}
       navigation={{
         nextEl: ".carousel-next",
         prevEl: ".carousel-prev",
       }}
       breakpoints={{
         535: {
-          slidesPerView: 5
+          slidesPerView: 4
         },
         1024: {
           slidesPerView: 8
