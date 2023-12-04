@@ -7,7 +7,7 @@ const ProductCard = () => {
     <div className="w-full sm:max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
       <div className="flex justify-center relative bg-gray-50 rounded-lg">
         <Image
-          src={"/product-1.png"}
+          src={"/images/product-1.png"}
           width={200}
           height={350}
           alt="product image"

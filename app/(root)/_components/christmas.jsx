@@ -14,7 +14,7 @@ const ChristmasSection = () => {
   return (
     <div className="container px-5 py-4 mx-auto">
       <div className="relative w-full h-16">
-        <Image src="/christmas-title.png" alt="" fill />
+        <Image src="/images/christmas-title.png" alt="" fill />
       </div>
       <Swiper
         className="relative group"
@@ -41,7 +41,7 @@ const ChristmasSection = () => {
           <SwiperSlide key={index}>
             <Image
               className="rounded-sm"
-              src="/christmas.png"
+              src="/images/christmas.png"
               width={200}
               height={200}
               alt=""

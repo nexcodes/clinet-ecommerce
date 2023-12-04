@@ -16,11 +16,11 @@ const Navbar = () => {
           </div>
           <div
             onClick={() => setIsMenuClosed((prev) => !prev)}
-            className="md:hidden"
+            className="lg:hidden"
           >
             <Menu />
           </div>
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden lg:flex space-x-4">
             <div>
               <input
                 type="text"
@@ -45,7 +45,7 @@ const Navbar = () => {
             </nav>
           </div>
         </div>
-        <div className="md:hidden" hidden={isMenuClosed}>
+        <div className="lg:hidden" hidden={isMenuClosed}>
           <div className="mt-3">
             <input
               type="text"

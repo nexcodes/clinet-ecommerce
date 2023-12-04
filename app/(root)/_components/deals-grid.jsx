@@ -11,10 +11,10 @@ const DealsGrid = () => {
             <h3 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl col-span-2">
               More reasons to shop
             </h3>
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
           </div>
           <div className="grid grid-cols-2 gap-4 bg-white p-4">
             <div className="col-span-2 flex items-center justify-between">
@@ -38,20 +38,23 @@ const DealsGrid = () => {
                 </button>
               </div>
             </div>
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
-            <Image src="/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
+            <Image src="/images/top-rated.png" width={200} height={200} alt="" />
           </div>
           <div className="grid grid-cols-1 bg-white p-4">
-            <h3 className="text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl">
+            <h3 className="text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl mb-2">
               In focus
             </h3>
-            <div className="relative w-full h-40">
-              <Image src="/promotion.png" alt="" fill />
+            <div className="space-y-4">
+
+            <div className="relative w-full min-h-[10rem]">
+              <Image src="/images/promotion.png" alt="" fill />
             </div>
-            <div className="relative w-full h-40">
-              <Image src="/promotion.png" alt="" fill />
+            <div className="relative w-full min-h-[10rem]">
+              <Image src="/images/promotion.png" alt="" fill />
+            </div>
             </div>
           </div>
         </div>
