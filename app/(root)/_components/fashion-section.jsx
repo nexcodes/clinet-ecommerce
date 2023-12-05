@@ -12,7 +12,7 @@ const FashionSection = () => {
   const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50">
       <div className="container px-5 py-4 mx-auto">
         <h3 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
           {"Women's fashion"}

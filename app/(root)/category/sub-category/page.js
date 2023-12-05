@@ -1,4 +1,4 @@
-import BrowseProductSection from "../_components/browse-product";
+import BrowseProductSection from "./_components/browse-product";
 import CategorySection from "./_components/category-section";
 import ProductSection from "./_components/product-section";
 import Sidebar from "../_components/side-bar";

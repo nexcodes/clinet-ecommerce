@@ -4,7 +4,7 @@ import React from "react";
 
 const DealsGrid = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50">
       <div className="container px-5 py-4 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="grid grid-cols-2 gap-4 bg-white p-4">
