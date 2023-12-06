@@ -8,6 +8,7 @@ import SellerAccount from "./_components/seller-account";
 import Testimonial from "./_components/testimonial";
 import KnowMore from "./_components/know-more";
 import NewsLetter from "./_components/news-letter";
+import Footer from "./_components/footer";
 export default function Sell() {
   return (
     <>
@@ -22,7 +23,6 @@ export default function Sell() {
             className="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/vW7EzyL7cOo"
             title="seller lab: why sell on noon? | ليش تبيع على نون"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
@@ -38,7 +38,6 @@ export default function Sell() {
             className="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/hmV3Py-q2Tg"
             title="Getting started selling on noon"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
@@ -47,6 +46,7 @@ export default function Sell() {
       <Testimonial />
       <KnowMore />
       <NewsLetter />
+      <Footer />
     </>
   );
 }

@@ -1,76 +1,57 @@
 "use client";
 
-import { Heart, Menu, ShoppingCart, Target, User } from "lucide-react";
+import { ChevronDown, Heart, ShoppingCart, Target, User } from "lucide-react";
 import React from "react";
-import SubNav from "./sub-nav";
+import UaeFlag from "./icons/uae-flag";
 
 const Navbar = () => {
-  const [isMenuClosed, setIsMenuClosed] = React.useState(true);
   return (
     <>
-      <div className="bg-yellow-300 p-4">
+      <div className="bg-yellow-300 p-4 hidden lg:block">
         <div className="flex gap-6 items-center justify-between">
-          <div className="flex space-x-1">
-            <Target />
-            <span className="font-bold text-lg">Logo</span>
+          <div className="flex items-center space-x-4">
+            <div className="flex space-x-1">
+              <Target />
+              <span className="font-bold text-lg">Logo</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <UaeFlag />
+              <p className="text-gray-800 text-xs">
+                Deliver to <br />
+                <strong>Dubai</strong>
+              </p>
+              <ChevronDown />
+            </div>
           </div>
-          <div
-            onClick={() => setIsMenuClosed((prev) => !prev)}
-            className="lg:hidden"
-          >
-            <Menu />
-          </div>
-          <div className="hidden lg:flex space-x-4">
+          <div className="flex space-x-4">
             <div>
               <input
                 type="text"
                 id="search-navbar"
-                className="block w-[60vw] p-2 text-sm text-gray-700 rounded-lg bg-white outline-none"
+                className="block w-[50vw] p-2 text-sm text-gray-700 rounded-lg bg-white outline-none"
                 placeholder="Search..."
               />
             </div>
             <nav className="flex items-center gap-4">
-              <div className="flex space-x-1 border-r border-gray-600 pr-2">
+              <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer">
+                Language
+              </div>
+              <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer">
                 <User />
                 <span>Login</span>
               </div>
-              <div className="flex space-x-1 border-r border-gray-600 pr-2">
+              <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer">
                 <Heart />
                 <span>Wishlist</span>
               </div>
-              <div className="flex space-x-1 pr-2">
+              <div className="flex space-x-1 pr-2 cursor-pointer">
                 <ShoppingCart />
                 <span>Cart</span>
               </div>
             </nav>
           </div>
         </div>
-        <div className="lg:hidden" hidden={isMenuClosed}>
-          <div className="mt-3">
-            <input
-              type="text"
-              id="search-navbar"
-              className="block w-full p-2 text-sm text-gray-700 rounded-lg bg-white outline-none"
-              placeholder="Search..."
-            />
-          </div>
-          <nav className="bg-gray-50 space-y-4 p-4 my-4">
-            <div className="flex space-x-1">
-              <User />
-              <span>Login</span>
-            </div>
-            <div className="flex space-x-1">
-              <Heart />
-              <span>Wishlist</span>
-            </div>
-            <div className="flex space-x-1">
-              <ShoppingCart />
-              <span>Cart</span>
-            </div>
-          </nav>
-        </div>
       </div>
-      <SubNav />
     </>
   );
 };

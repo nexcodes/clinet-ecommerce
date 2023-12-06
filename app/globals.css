@@ -16,13 +16,22 @@
 }
 
 .bg-image-sell {
-  background-image: url('/images/sell.webp');
+  background-image: url("/images/sell.webp");
   background-size: cover;
   background-position: center;
 }
 
 .bg-image-desert {
-  background-image: url('/images/deliver.webp');
+  background-image: url("/images/deliver.webp");
   background-size: cover;
   background-position: center;
+}
+
+.bg-pink-blue {
+  background: linear-gradient(
+    45deg,
+    rgba(248, 165, 255, 0.3477766106442577) 10%,
+    rgba(238, 238, 238, 1) 45%,
+    rgba(121, 232, 255, 0.5354516806722689) 90%
+  );
 }

@@ -15,7 +15,7 @@ const Banner = () => {
         <Image src="/images/banner-4.png" alt="" fill />
       </div>
       <div className="flex">
-        <div className="w-[70%]">
+        <div className="w-full">
           <Swiper
             className="relative group"
             modules={[Navigation]}
@@ -49,12 +49,7 @@ const Banner = () => {
             </button>
           </Swiper>
         </div>
-        <div className="w-[30%]">
-
-        <div className="relative w-full h-32 md:h-48">
-          <Image src="/images/banner-5.png" alt="" fill />
-        </div>
-        </div>
+        
       </div>
     </div>
   );
