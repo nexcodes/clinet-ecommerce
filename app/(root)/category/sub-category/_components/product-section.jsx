@@ -14,12 +14,12 @@ const ProductSection = () => {
   return (
     <div className="container px-5 py-4 mx-auto">
       <div className="flex items-center justify-between">
-        <h3 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
+        <h3 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
           Iphone 14 pro
         </h3>
         <button
           type="button"
-          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-50 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "
+          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-50 font-medium rounded-lg text-xs sm:text-sm px-5 py-2.5 me-2 mb-2 "
         >
           View all
         </button>

@@ -48,7 +48,7 @@ const BrowseProductSection = () => {
     <div className="bg-gray-50">
       <div className="container px-5 py-4 mx-auto">
         <div className="mb-4 space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0 space-x-2">
             <span className="text-gray-500">
               1392728 Results for &quot;
               <strong className="text-black">Deals</strong>&quot;

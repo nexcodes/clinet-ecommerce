@@ -14,10 +14,10 @@ const SubNav = () => {
     >
       <div className="px-4 py-3 mx-auto">
         <div className="flex items-center">
-          <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm overflow-x-scroll no-scrollbar">
+          <ul className="flex flex-row font-medium mt-0 space-x-8 text-sm overflow-x-scroll no-scrollbar">
             <li
               onMouseEnter={() => setIsClosed(false)}
-              className="text-blue-500 font-bold border-r border-blue-500 flex px-2 space-x-2"
+              className="text-blue-500 font-bold border-r border-blue-500 flex px-2 space-x-2 min-w-fit"
             >
               <span>All Categories</span>
               <ChevronDown />

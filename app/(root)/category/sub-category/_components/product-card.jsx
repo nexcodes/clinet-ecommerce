@@ -4,7 +4,7 @@ import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="w-full sm:max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
+    <div className="w-full bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
       <div className="flex justify-center relative bg-gray-50 rounded-lg">
         <Image
           src={"/images/product-1.png"}

@@ -7,7 +7,7 @@ import Sidebar from "./_components/side-bar";
 
 export default function Category() {
   return (
-    <div className="md:flex">
+    <div className="lg:flex">
       <Sidebar />
       <main className="lg:w-[calc(100vw-320px)]">
         <CategorySection />

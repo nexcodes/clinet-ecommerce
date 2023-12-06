@@ -4,7 +4,7 @@ import React from "react";
 const SellerAccount = () => {
   return (
     <div className="max-w-4xl mx-auto px-5 py-8">
-      <div className="flex items-center gap-8">
+      <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="relative min-h-screen w-full">
           <Image src="/images/seller-account.webp" alt="" fill />
         </div>

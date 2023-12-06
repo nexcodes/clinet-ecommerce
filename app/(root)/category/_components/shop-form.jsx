@@ -12,7 +12,7 @@ const ShopFromSection = () => {
         {arr.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-900 rounded-lg px-8 py-6 flex items-center justify-center"
+            className="bg-gray-900 rounded-lg px-8 py-6 flex items-center justify-center w-60 h-32"
           >
             <p className="text-yellow-400 text-3xl font-extrabold leading-none tracking-tight md:text-4xl">
               {item}
