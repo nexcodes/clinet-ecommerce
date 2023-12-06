@@ -27,6 +27,12 @@
   background-position: center;
 }
 
+.bg-image-login {
+  background-image: url("/images/login-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-pink-blue {
   background: linear-gradient(
     45deg,
