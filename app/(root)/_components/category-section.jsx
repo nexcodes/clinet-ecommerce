@@ -12,7 +12,7 @@ const CategorySection = () => {
   const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
   return (
-    <div className="container px-5 py-4 mx-auto">
+    <div className="2xl:max-w-[88rem] px-5 py-4 mx-auto">
       <Swiper
         className="relative group"
         modules={[Navigation]}

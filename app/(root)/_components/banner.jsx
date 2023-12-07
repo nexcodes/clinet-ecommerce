@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="container px-5 mx-auto">
+    <div className="2xl:max-w-[88rem] mx-auto">
       <div className="relative w-full h-16 md:h-24">
         <Image src="/images/banner-4.png" alt="" fill />
       </div>

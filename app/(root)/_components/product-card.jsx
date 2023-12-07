@@ -1,4 +1,7 @@
-import { Heart, ShoppingCart, Star } from "lucide-react";
+import Cart from "@/components/icons/cart";
+import Express from "@/components/icons/express";
+import StarFill from "@/components/icons/star-fill";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -19,11 +22,11 @@ const ProductCard = () => {
           <div className="flex justify-between items-center">
             <div className="bg-white rounded-full cursor-pointer px-3 py-1 space-x-1 flex items-center">
               <span className="text-gray-800 font-bold">4.4</span>
-              <Star size={16} />
+              <StarFill className="text-green-600 w-4 h-4" />
               <span className="text-gray-500 font-normal">{"(7)"}</span>
             </div>
             <div className="bg-white rounded-full cursor-pointer p-2">
-              <ShoppingCart size={20} />
+              <Cart />
             </div>
           </div>
         </div>
@@ -37,6 +40,13 @@ const ProductCard = () => {
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-gray-900">$599</span>
         </div>
+        <div className="flex items-center space-x-1 my-1">
+          <Image src="/images/bag.png" alt="" width={15} height={15} />
+          <p className="text-xs md:text-sm text-gray-900 dark:text-white">
+            only 3 left in stock
+          </p>
+        </div>
+        <Express />
       </div>
     </div>
   );

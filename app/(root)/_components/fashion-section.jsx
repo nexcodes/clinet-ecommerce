@@ -13,7 +13,7 @@ const FashionSection = () => {
 
   return (
     <div className="bg-gray-50">
-      <div className="container px-5 py-4 mx-auto">
+      <div className="2xl:max-w-[88rem] px-5 py-4 mx-auto">
         <h3 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
           {"Women's fashion"}
         </h3>

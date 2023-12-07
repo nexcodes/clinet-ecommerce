@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <LoginModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <MapModal isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} />
-      <div className="bg-yellow-300 p-4 hidden lg:block">
+      <div className="bg-[#feee00] p-4 hidden lg:block">
         <div className="flex gap-6 items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex space-x-1">
@@ -38,7 +38,7 @@ const Navbar = () => {
               <input
                 type="text"
                 id="search-navbar"
-                className="block w-[50vw] p-2 text-sm text-gray-700 rounded-lg bg-white outline-none"
+                className="block w-[40vw] xl:w-[50vw] p-2 text-sm text-gray-700 rounded-lg bg-white outline-none"
                 placeholder="Search..."
               />
             </div>
