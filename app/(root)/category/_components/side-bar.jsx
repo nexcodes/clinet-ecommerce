@@ -38,15 +38,15 @@ const Sidebar = () => {
           />
         </div>
 
-        <div className="space-y-2 mt-6">
+        <div className="space-y-8 mt-6">
           {/* brand */}
           <div>
             <div className="flex items-center justify-between">
-              <h6 className="text-lg font-bold">Brand</h6>
+              <h6 className="text-lg font-bold text-gray-900">Brand</h6>
               <ChevronDown
                 onClick={() => setBrandHidden((prev) => !prev)}
                 className={clsx(
-                  "transition cursor-pointer",
+                  "text-gray-500 transition cursor-pointer",
                   brandHidden && "-rotate-90"
                 )}
               />
@@ -206,11 +206,11 @@ const Sidebar = () => {
           {/* Price */}
           <div>
             <div className="flex items-center justify-between">
-              <h6 className="text-lg font-bold">Price</h6>
+              <h6 className="text-lg font-bold text-gray-900">Price</h6>
               <ChevronDown
                 onClick={() => setPriceHidden((prev) => !prev)}
                 className={clsx(
-                  "transition cursor-pointer",
+                  "text-gray-500 transition cursor-pointer",
                   priceHidden && "-rotate-90"
                 )}
               />
@@ -239,11 +239,11 @@ const Sidebar = () => {
           {/* Rating */}
           <div>
             <div className="flex items-center justify-between">
-              <h6 className="text-lg font-bold">Product Rating</h6>
+              <h6 className="text-lg font-bold text-gray-900">Product Rating</h6>
               <ChevronDown
                 onClick={() => setRatingHidden((prev) => !prev)}
                 className={clsx(
-                  "transition cursor-pointer",
+                  "text-gray-500 transition cursor-pointer",
                   ratingHidden && "-rotate-90"
                 )}
               />
@@ -266,11 +266,11 @@ const Sidebar = () => {
           {/* color */}
           <div>
             <div className="flex items-center justify-between">
-              <h6 className="text-lg font-bold">Color</h6>
+              <h6 className="text-lg font-bold text-gray-900">Color</h6>
               <ChevronDown
                 onClick={() => setColorHidden((prev) => !prev)}
                 className={clsx(
-                  "transition cursor-pointer",
+                  "text-gray-500 transition cursor-pointer",
                   colorHidden && "-rotate-90"
                 )}
               />

@@ -9,7 +9,7 @@ const UaeFlag = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path d="M31 0H0V20H31V0Z" fill="#00732F" />
         <path d="M31 6.66669H0V20H31V6.66669Z" fill="white" />
         <path d="M31 13.3333H0V20H31V13.3333Z" fill="black" />
