@@ -2,8 +2,9 @@ import Image from "next/image";
 import BreadCrump from "./_components/breadcrump";
 import { BadgeCheck, Box, Star, StarIcon, ThumbsUp } from "lucide-react";
 import EMI from "@/components/icons/emi";
+import StarFill from "@/components/icons/star-fill";
 
-export default function Home() {
+export default function Product() {
   return (
     <>
       <div className="py-4">
@@ -11,9 +12,9 @@ export default function Home() {
       </div>
       <section className="text-gray-600 overflow-hidden p-4">
         <div className="container py-8 mx-auto">
-          <div className="flex flex-col lg:flex-row flex-wrap">
-            {/*   */}
-            <div className="w-full lg:w-[30%] flex gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+            {/*  product image */}
+            <div className="w-full flex gap-4">
               <div className="space-y-2">
                 <Image
                   width={100}
@@ -45,7 +46,7 @@ export default function Home() {
                 />
               </div>
               <div className="relative w-full px-4 py-2">
-                <Image
+                <img
                   alt=""
                   className="object-contain rounded"
                   src="/images/product-1.png"
@@ -53,9 +54,9 @@ export default function Home() {
                 />
               </div>
             </div>
-            {/*  */}
-            <div className="w-full lg:w-[70%] flex flex-col lg:flex-row">
-              <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            {/* product description */}
+            <div className="w-full flex flex-col lg:flex-row pb-4 lg:pr-4">
+              <div className="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">
                   Apple
                 </h2>
@@ -142,8 +143,8 @@ export default function Home() {
                       </span>
                     </div>
                   </div>
-                  <div className="w-full">
-                    <button className="flex w-full text-center font-semibold text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                  <div className="w-full text-center">
+                    <button className="w-full font-semibold text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                       Add to Cart
                     </button>
                   </div>
@@ -163,7 +164,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-2 my-4">
+                <div className="flex flex-wrap items-center gap-2 my-4">
                   <Image
                     width={100}
                     height={100}
@@ -215,11 +216,134 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* seller & other misc info */}
+            <div className="border-t lg:border-t-0 lg:border-l border-gray-300 p-2">
+              <div className="border-b border-gray-300 rounded px-4 py-2 flex items-center space-x-4">
+                <EMI />
+                <span className="text-sm">1 year warranty.</span>
+                <a className="text-sm text-blue-500 underline font-bold">
+                  Learn more
+                </a>
+              </div>
+              <div className="border-b border-gray-300 rounded px-4 py-2 flex items-center space-x-4">
+                <EMI />
+                <span className="text-sm">1 year warranty.</span>
+                <a className="text-sm text-blue-500 underline font-bold">
+                  Learn more
+                </a>
+              </div>
+              <div className="border-b border-gray-300 rounded px-4 py-2 flex items-center space-x-4">
+                <EMI />
+                <span className="text-sm">1 year warranty.</span>
+                <a className="text-sm text-blue-500 underline font-bold">
+                  Learn more
+                </a>
+              </div>
+
+              {/* seller box */}
+              <div className="border border-gray-300 rounded-md">
+                <div className="border-b border-gray-300 p-4">
+                  <div className="flex items-center mb-4 space-y-2">
+                    <Image
+                      height={40}
+                      width={40}
+                      className="me-4 rounded-full"
+                      src="/images/pic-1.jpg"
+                      alt=""
+                    />
+                    <div className="font-medium">
+                      <div className="flex items-center space-x-1">
+                        Sold by
+                        <span className="ml-2 selection:text-blue-500 underline font-semibold">
+                          Company
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="px-2 py-1 bg-green-600 flex items-center space-x-1 rounded-lg">
+                          <span className="text-white">4.6</span>
+                          <StarFill className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="block text-sm text-gray-500 dark:text-gray-400">
+                          79% positive rating
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-md font-semibold text-gray-500 dark:text-gray-400">
+                    TDRA registered stock with 1 year warrenty
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 place-items-center p-4">
+                  <div className="text-center flex flex-col items-center justify-center border-r border-gray-300 pr-2">
+                    <Image
+                      src="/images/rating.png"
+                      alt=""
+                      width={20}
+                      height={20}
+                    />
+                    <span className="block text-md text-gray-500 ">
+                      Great recent rating
+                    </span>
+                  </div>
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <span className="block text-2xl text-green-600 font-bold">
+                      80%
+                    </span>
+                    <span className="block text-md text-gray-500">
+                      product as described
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/*  */}
+
+              <div className="px-4 py-2 space-y-2">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-pink-50 p-2 rounded-full">
+                    <EMI />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-md font-bold">Free returns</span>
+                    <span className="text-sm">
+                      get free return on eligible items
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="px-4 py-2 space-y-2">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-pink-50 p-2 rounded-full">
+                    <EMI />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-md font-bold">Free returns</span>
+                    <span className="text-sm">
+                      get free return on eligible items
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="px-4 py-2 space-y-2">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-pink-50 p-2 rounded-full">
+                    <EMI />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-md font-bold">Free returns</span>
+                    <span className="text-sm">
+                      get free return on eligible items
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
-      
-      {/*  */}
+
+      {/* overview */}
       <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
         <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl border-b border-gray-200 lg:pb-4">
@@ -322,7 +446,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/*  */}
+      {/* reviews */}
       <div className="mx-auto px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
         <div className="lg:col-span-3 lg:pr-8">
           <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl border-b border-gray-200 lg:pb-4">
@@ -536,7 +660,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-8 col-span-2">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap gap-2 items-center justify-between">
             <h3 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl lg:pb-4">
               3 Customer Reviews
             </h3>
