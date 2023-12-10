@@ -10,7 +10,7 @@ const SubNav = () => {
   return (
     <nav
       onMouseLeave={() => setIsClosed(true)}
-      className="bg-gray-50 dark:bg-gray-700 relative"
+      className="bg-gray-50 dark:bg-gray-700 relative hidden lg:block"
     >
       <div className="px-4 py-3 mx-auto">
         <div className="flex items-center">
