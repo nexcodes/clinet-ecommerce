@@ -43,7 +43,7 @@ const MobileNav = () => {
         <div className="mt-4">
           <div
             onClick={() => setIsMapOpen(true)}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 cursor-pointer"
           >
             <MapPinned className="w-4 h-4 text-gray-500" />
             <p className="text-gray-800 text-xs">
@@ -62,7 +62,7 @@ const MobileNav = () => {
             className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Home className="w-5 h-5 mb-2 text-gray-500" />
-            <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
               Home
             </span>
           </button>
@@ -72,7 +72,7 @@ const MobileNav = () => {
           >
             <Tags className="w-5 h-5 mb-2 text-gray-500" />
 
-            <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
               Categories
             </span>
           </button>
@@ -82,7 +82,7 @@ const MobileNav = () => {
           >
             <Gift className="w-5 h-5 mb-2 text-gray-500" />
 
-            <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
               Clearance
             </span>
           </button>
@@ -93,7 +93,7 @@ const MobileNav = () => {
           >
             <User className="w-5 h-5 mb-2 text-gray-500" />
 
-            <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
               profile
             </span>
           </button>
@@ -103,7 +103,7 @@ const MobileNav = () => {
           >
             <ShoppingCart className="w-5 h-5 mb-2 text-gray-500" />
 
-            <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            <span className="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
               Cart
             </span>
           </button>

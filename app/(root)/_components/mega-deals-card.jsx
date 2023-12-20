@@ -7,7 +7,7 @@ const MegaDealsCard = () => {
     <div>
       <div className="bg-gray-100 rounded-t-lg relative">
         <div className="absolute top-0 right-0 bg-yellow-400 px-4 rounded-b-lg">
-          <p className="text-red-600 text-xs md:text-sm">Smartphone deal</p>
+          <p className="text-red-600 text-[0.6rem] md:text-sm">Smartphone deal</p>
         </div>
 
         <div className="absolute bottom-0 right-0 px-4">
@@ -16,7 +16,7 @@ const MegaDealsCard = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center mt-4">
+        <div className="flex items-center justify-center pt-2 pb-4 sm:pt-4 sm:pb-0">
           <Image src="/images/product-1.png" width={80} height={80} alt="" />
         </div>
       </div>

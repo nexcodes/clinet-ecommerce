@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             <div
               onClick={() => setIsMapOpen(true)}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 cursor-pointer"
             >
               <UaeFlag />
               <p className="text-gray-800 text-xs">
@@ -43,23 +43,23 @@ const Navbar = () => {
               />
             </div>
             <nav className="flex items-center gap-4">
-              <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer">
+              <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
                 Language
               </div>
               <div
                 onClick={() => setIsOpen(true)}
-                className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer"
+                className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm"
               >
-                <User />
                 <span>Login</span>
+                <User size={16}/>
               </div>
-              <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer">
-                <Heart />
+              <div className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
                 <span>Wishlist</span>
+                <Heart size={16}/>
               </div>
-              <div className="flex space-x-1 pr-2 cursor-pointer">
-                <ShoppingCart />
+              <div className="flex items-center space-x-1 pr-2 cursor-pointer text-sm">
                 <span>Cart</span>
+                <ShoppingCart size={16}/>
               </div>
             </nav>
           </div>

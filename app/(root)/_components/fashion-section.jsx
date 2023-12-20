@@ -14,9 +14,15 @@ const FashionSection = () => {
   return (
     <div className="bg-gray-50">
       <div className="2xl:max-w-[88rem] px-5 py-4 mx-auto">
+        <div className="flex items-center justify-between">
+
         <h3 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
           {"Women's fashion"}
         </h3>
+        <button className="border border-gray-900 text-gray-900 font-bold text-lg rounded-[1px] px-2 py-1">
+          View All
+        </button>
+        </div>
         <Swiper
           className="relative group"
           modules={[Navigation]}
