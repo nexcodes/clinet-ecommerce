@@ -1,35 +1,26 @@
 import Cart from "@/components/icons/cart";
 import Express from "@/components/icons/express";
 import StarFill from "@/components/icons/star-fill";
-import { Heart } from "lucide-react";
+import { Heart, MoreHorizontal } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const ProductCard = () => {
   return (
-    <div className="w-full sm:max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
+    <div className="w-full sm:max-w-[14rem] bg-white rounded-lg p-2">
       <div className="flex justify-center relative bg-gray-50 rounded-lg p-2">
-        <Link href="/product">
-          <Image
-            src={"/images/product-1.png"}
-            width={200}
-            height={350}
-            alt="product image"
-          />
-        </Link>
-        <div className="absolute top-1 right-1 bg-white shadow rounded-full cursor-pointer p-2">
-          <Heart size={20} className="text-gray-700" />
-        </div>
+        <Image
+          src={"/images/product-1.png"}
+          width={200}
+          height={350}
+          alt="product image"
+        />
         <div className="absolute bottom-1 left-0 right-0 px-4">
           <div className="flex justify-between items-center">
             <div className="bg-white rounded-full cursor-pointer px-3 py-1 space-x-1 flex items-center">
               <span className="text-gray-800 font-bold">4.4</span>
               <StarFill className="text-green-600 w-4 h-4" />
               <span className="text-gray-500 font-normal">{"(7)"}</span>
-            </div>
-            <div className="bg-white rounded-full cursor-pointer p-2">
-              <Cart />
             </div>
           </div>
         </div>
@@ -43,13 +34,15 @@ const ProductCard = () => {
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-gray-900">$599</span>
         </div>
-        <div className="flex items-center space-x-1 my-1">
-          <Image src="/images/bag.png" alt="" width={15} height={15} />
-          <p className="text-xs md:text-sm text-gray-900 dark:text-white">
-            only 3 left in stock
-          </p>
-        </div>
         <Express />
+      </div>
+      <div className="flex items-center gap-4">
+        <button className="bg-blue-500 rounded text-white font-bold px-4 py-2">
+          ADD TO CART
+        </button>
+        <button className="border border-blue-500 rounded text-blue-500 font-bold px-4 py-2">
+          <MoreHorizontal size={20} />
+        </button>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { useState } from "react";
 import GooglePlay from "./icons/google-play";
 import Visa from "./icons/visa";
 import clsx from "clsx";
+import Link from "next/link";
 
 const Footer = () => {
   const [according, setAccording] = useState("");
@@ -241,37 +242,20 @@ const Footer = () => {
 
             <ul className="flex flex-row font-medium mt-0 space-x-8 items-center justify-center md:justify-start text-sm">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/sell"
                   className="text-gray-900 dark:text-white hover:underline"
-                  aria-current="page"
                 >
-                  Home
-                </a>
+                  Become a vendor
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/terms"
                   className="text-gray-900 dark:text-white hover:underline"
                 >
-                  Company
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-900 dark:text-white hover:underline"
-                >
-                  Team
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-900 dark:text-white hover:underline"
-                >
-                  Features
-                </a>
+                  Terms of service
+                </Link>
               </li>
             </ul>
           </div>

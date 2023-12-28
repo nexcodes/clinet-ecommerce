@@ -2,6 +2,7 @@
 
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const SubNav = () => {
@@ -39,16 +40,16 @@ const SubNav = () => {
               Categories
             </h3>
             <ul className="space-y-2">
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
-              <li className="text-sm text-gray-500">Mobiles & Accessories</li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
+              <li className="text-sm text-gray-500"><Link href="/category">Mobiles & Accessories</Link></li>
             </ul>
           </div>
           <div className="cols-span-2">

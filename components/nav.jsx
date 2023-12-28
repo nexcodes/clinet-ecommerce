@@ -5,6 +5,7 @@ import React from "react";
 import UaeFlag from "./icons/uae-flag";
 import LoginModal from "./login-modal";
 import MapModal from "./map-modal";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -17,10 +18,12 @@ const Navbar = () => {
       <div className="bg-[#feee00] p-4 hidden lg:block">
         <div className="flex gap-6 items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="flex space-x-1">
-              <Target />
-              <span className="font-bold text-lg">Logo</span>
-            </div>
+            <Link href="/">
+              <div className="flex space-x-1">
+                <Target />
+                <span className="font-bold text-lg">Logo</span>
+              </div>
+            </Link>
             <div
               onClick={() => setIsMapOpen(true)}
               className="flex items-center gap-2 cursor-pointer"
@@ -51,15 +54,17 @@ const Navbar = () => {
                 className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm"
               >
                 <span>Login</span>
-                <User size={16}/>
+                <User size={16} />
               </div>
-              <div className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
-                <span>Wishlist</span>
-                <Heart size={16}/>
-              </div>
+              <Link href="/wishlist">
+                <div className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
+                  <span>Wishlist</span>
+                  <Heart size={16} />
+                </div>
+              </Link>
               <div className="flex items-center space-x-1 pr-2 cursor-pointer text-sm">
                 <span>Cart</span>
-                <ShoppingCart size={16}/>
+                <ShoppingCart size={16} />
               </div>
             </nav>
           </div>

@@ -7,6 +7,7 @@ import ProductCard from "./product-card";
 import "swiper/css/navigation";
 import "swiper/css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const ProductSection = () => {
   const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -17,12 +18,13 @@ const ProductSection = () => {
         <h3 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl">
           Iphone 14 pro
         </h3>
-        <button
+        <Link
+          href="/category/sub-category"
           type="button"
           className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-50 font-medium rounded-lg text-xs sm:text-sm px-5 py-2.5 me-2 mb-2 "
         >
           View all
-        </button>
+        </Link>
       </div>
 
       <Swiper

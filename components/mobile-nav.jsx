@@ -14,6 +14,7 @@ import {
 import React from "react";
 import LoginModal from "./login-modal";
 import MapModal from "./map-modal";
+import Link from "next/link";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -26,8 +27,10 @@ const MobileNav = () => {
       <div className="bg-white p-4 lg:hidden">
         <div className="flex gap-4 items-center justify-between">
           <div className="flex space-x-1">
-            <Target />
-            <span className="font-bold text-lg">Logo</span>
+            <Link href="/">
+              <Target />
+              <span className="font-bold text-lg">Logo</span>
+            </Link>
           </div>
           <div className="grow">
             <input
