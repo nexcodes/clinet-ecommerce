@@ -4,6 +4,7 @@ import { useState } from "react";
 import EMI from "@/components/icons/emi";
 import StarFill from "@/components/icons/star-fill";
 import { StarIcon } from "lucide-react";
+import Image from "next/image";
 
 const Product = ({ product }) => {
   const [imageUrl, setImageURL] = useState(product.images[0]);

@@ -69,7 +69,7 @@ export const BannerFull = ({ banners }) => {
               <ChevronLeft />
             </button>
             {banners?.map((banner, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={banner.image}>
                 <div className="relative w-full h-32 md:h-40">
                   <Image src={banner.image} alt="" fill />
                 </div>
