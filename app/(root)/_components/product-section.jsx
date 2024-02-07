@@ -8,8 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const ProductSection = () => {
-  const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const ProductSection = ({products}) => {
 
   return (
     <div className="bg-gray-50">
@@ -39,9 +38,9 @@ const ProductSection = () => {
           <button className="carousel-prev group-hover:opacity-100  opacity-0 bg-white p-2 shadow-lg absolute top-1/2 left-4 z-[99999] rounded-full cursor-pointer transition">
             <ChevronLeft />
           </button>
-          {arr.map((item, index) => (
+          {products.map((item, index) => (
             <SwiperSlide key={index}>
-              <ProductCard />
+              <ProductCard product={item}/>
             </SwiperSlide>
           ))}
           <button className="carousel-next group-hover:opacity-100  opacity-0 bg-white p-2 shadow-lg absolute top-1/2 right-4 z-[99999] rounded-full cursor-pointer transition">

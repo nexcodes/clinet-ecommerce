@@ -4,15 +4,28 @@ import FashionSection from "@/app/(root)/_components/fashion-section";
 import { Banner, BannerFull } from "@/app/(root)/_components/banner";
 import ChristmasSection from "@/app/(root)/_components/christmas";
 import DealsGrid from "@/app/(root)/_components/deals-grid";
+import { getBanners } from "@/actions/get-banners";
+import { getCategories } from "@/actions/get-categories";
+import { getProducts } from "@/actions/get-products";
 
-export default function Home() {
+export default async function Home() {
+  const banners = await getBanners();
+
+  const categories = await getCategories();
+
+  const { recommendedProducts } = (await getProducts()) || {
+    recommendedProducts: null,
+  };
+
   return (
     <>
-      <BannerFull />
+      {banners && <BannerFull banners={banners} />}
       <main className="space-y-4">
-        <CategorySection />
+        {categories && <CategorySection categories={categories} />}
         <DealsGrid />
-        <ProductSection />
+        {recommendedProducts && (
+          <ProductSection products={recommendedProducts} />
+        )}
         <ChristmasSection />
         <Banner />
         <FashionSection />

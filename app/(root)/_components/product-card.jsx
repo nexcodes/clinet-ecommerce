@@ -6,13 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
   return (
     <div className="w-full sm:max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
       <div className="flex justify-center relative bg-gray-50 rounded-lg p-2">
-        <Link href="/product">
+        <Link href={`/product/${product._id}`}>
           <Image
-            src={"/images/product-1.png"}
+            src={product.thumbnail}
             width={200}
             height={350}
             alt="product image"
@@ -37,17 +37,38 @@ const ProductCard = () => {
       <div className="p-2">
         <a href="#">
           <h5 className="text-md font-semibold tracking-tight text-gray-900">
-            Apple iPhone 14 Pro Max
+            {product?.name}
           </h5>
         </a>
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-gray-900">$599</span>
+          {product?.saleStatus ? (
+            <div>
+              <span className="text-black font-bold text-md md:text-lg line-through">
+                ${product?.price}
+              </span>{" "}
+              <span className="text-black font-bold text-lg md:text-xl">
+                ${product?.salePrice}
+              </span>
+              {" "}
+              <span className="text-green-600 font-bold text-xs">
+                {product?.discount}%
+              </span>
+            </div>
+          ) : (
+            <span className="text-xl font-bold text-gray-900">
+              ${product?.price}
+            </span>
+          )}
         </div>
-        <div className="flex items-center space-x-1 my-1">
-          <Image src="/images/bag.png" alt="" width={15} height={15} />
-          <p className="text-xs md:text-sm text-gray-900 dark:text-white">
-            only 3 left in stock
-          </p>
+        <div className="flex items-center space-x-1 my-1 h-4">
+          {product?.quantity < 40 && (
+            <>
+              <Image src="/images/bag.png" alt="" width={15} height={15} />
+              <p className="text-xs md:text-sm text-gray-900 dark:text-white">
+                only {product?.quantity} left in stock
+              </p>
+            </>
+          )}
         </div>
         <Express />
       </div>
