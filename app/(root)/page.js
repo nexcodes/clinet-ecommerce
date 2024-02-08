@@ -13,8 +13,10 @@ export default async function Home() {
 
   const categories = await getCategories();
 
-  const { recommendedProducts } = (await getProducts()) || {
+  const { recommendedProducts , moreReasonsToShop , megaDeals } = (await getProducts()) || {
     recommendedProducts: null,
+    moreReasonsToShop: null,
+    megaDeals: null,
   };
 
   return (
@@ -22,7 +24,7 @@ export default async function Home() {
       {banners && <BannerFull banners={banners} />}
       <main className="space-y-4">
         {categories && <CategorySection categories={categories} />}
-        <DealsGrid />
+        {(!!moreReasonsToShop || !!megaDeals) && <DealsGrid moreReasonsToShop={moreReasonsToShop} megaDeals={megaDeals}/>}
         {recommendedProducts && (
           <ProductSection products={recommendedProducts} />
         )}

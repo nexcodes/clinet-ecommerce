@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import MegaDealsCard from "./mega-deals-card";
 
-const DealsGrid = () => {
+const DealsGrid = ({megaDeals}) => {
   return (
     <div className="bg-gray-50">
       <div className="2xl:max-w-[88rem] px-5 py-4 mx-auto">
@@ -62,10 +62,7 @@ const DealsGrid = () => {
                 </button>
               </div>
             </div>
-            <MegaDealsCard />
-            <MegaDealsCard />
-            <MegaDealsCard />
-            <MegaDealsCard />
+            {megaDeals && megaDeals.map((item , index) => <MegaDealsCard key={item.id + "m"} product={item}/>)}
           </div>
           <div className="bg-white p-4">
             <h3 className="text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl mb-2">

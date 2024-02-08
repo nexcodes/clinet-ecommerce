@@ -16,7 +16,7 @@ const Product = ({ product }) => {
           {/*  product image */}
           <div className="w-full flex gap-4">
             <div className="space-y-2">
-              {/* {product.images.map((item) => {
+              {product.images.map((item) => {
                 return (
                   <Image
                     key={item}
@@ -24,11 +24,11 @@ const Product = ({ product }) => {
                     height={100}
                     alt=""
                     onClick={() => setImageURL(item)}
-                    className="object-cover object-center rounded border-2 border-gray-300 p-2"
+                    className="object-cover object-center rounded border-2 border-gray-300 p-2 cursor-pointer"
                     src={item}
                   />
                 );
-              })} */}
+              })}
             </div>
             <div className="relative w-full px-4 py-2">
               <img

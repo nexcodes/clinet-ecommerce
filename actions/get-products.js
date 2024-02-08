@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getProducts = async () => {
   try {
-    const res = await axios.get(`${process.env.SERVER_URL}/public/api/product/getAllProducts`);
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/public/api/product/getAllProducts`);
 
     if (!res.data.success) throw new Error("Failed to fetch products");
 

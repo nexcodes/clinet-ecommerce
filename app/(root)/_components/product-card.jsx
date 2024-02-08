@@ -1,12 +1,18 @@
+"use client";
+
 import Cart from "@/components/icons/cart";
 import Express from "@/components/icons/express";
 import StarFill from "@/components/icons/star-fill";
+import { useCartStore } from "@/zustand/cart";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { toast } from "sonner";
 
 const ProductCard = ({ product }) => {
+  const { cart , addItemToCart } = useCartStore();
+
   return (
     <div className="w-full sm:max-w-[14rem] bg-white border-[1px] border-gray-200 rounded-lg shadow p-2">
       <div className="flex justify-center relative bg-gray-50 rounded-lg p-2">
@@ -28,7 +34,10 @@ const ProductCard = ({ product }) => {
               <StarFill className="text-green-600 w-4 h-4" />
               <span className="text-gray-500 font-normal">{"(7)"}</span>
             </div>
-            <div className="bg-white rounded-full cursor-pointer p-2">
+            <div className="bg-white rounded-full cursor-pointer p-2" onClick={() => {
+              const res = addItemToCart(product)
+              toast.info(res.message)
+            }}>
               <Cart />
             </div>
           </div>
@@ -48,8 +57,7 @@ const ProductCard = ({ product }) => {
               </span>{" "}
               <span className="text-black font-bold text-lg md:text-xl">
                 ${product?.salePrice}
-              </span>
-              {" "}
+              </span>{" "}
               <span className="text-green-600 font-bold text-xs">
                 {product?.discount}%
               </span>

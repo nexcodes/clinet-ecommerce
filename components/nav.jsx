@@ -6,10 +6,13 @@ import UaeFlag from "./icons/uae-flag";
 import LoginModal from "./login-modal";
 import MapModal from "./map-modal";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isMapOpen, setIsMapOpen] = React.useState(false);
+
+  const session = useSession();
 
   return (
     <>
@@ -49,13 +52,20 @@ const Navbar = () => {
               <div className="flex space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
                 Language
               </div>
-              <div
-                onClick={() => setIsOpen(true)}
-                className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm"
-              >
-                <span>Login</span>
-                <User size={16} />
-              </div>
+              {session?.status === "authenticated" ? (
+                <div className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
+                  <span>{session?.data?.user?.name}</span>
+                  <User size={16} />
+                </div>
+              ) : (
+                <div
+                  onClick={() => setIsOpen(true)}
+                  className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm"
+                >
+                  <span>Login</span>
+                  <User size={16} />
+                </div>
+              )}
               <Link href="/wishlist">
                 <div className="flex items-center space-x-1 border-r border-gray-600 pr-2 cursor-pointer text-sm">
                   <span>Wishlist</span>
