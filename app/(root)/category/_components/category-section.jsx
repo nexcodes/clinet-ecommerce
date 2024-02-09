@@ -2,9 +2,7 @@
 
 import CategoryCard from "./category-card";
 
-const CategorySection = () => {
-  const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-
+const CategorySection = ({categories}) => {
   return (
     <div className="bg-gray-50">
       <div className="p-4">
@@ -14,8 +12,8 @@ const CategorySection = () => {
           </h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 place-items-center">
-          {arr.map((item, index) => (
-            <CategoryCard key={index} />
+          {categories.map((item, index) => (
+            <CategoryCard key={index} category={item}/>
           ))}
         </div>
       </div>

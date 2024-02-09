@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="bg-white rounded-full cursor-pointer p-2" onClick={() => {
               const res = addItemToCart(product)
-              toast.info(res.message)
+              toast.message(res.message)
             }}>
               <Cart />
             </div>

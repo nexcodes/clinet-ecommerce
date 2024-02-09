@@ -13,8 +13,6 @@ export default async function ProductPage({ params }) {
 
   const product = await getProductById(params?.product_id);
 
-  console.log(product);
-
   if (!product) {
     notFound();
   }

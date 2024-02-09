@@ -1,8 +1,12 @@
+import { useCartStore } from "@/zustand/cart";
 import { Heart, Trash } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { toast } from "sonner";
 
 const ProductCard = ({ product }) => {
+  const { removeItemFromCart } = useCartStore();
+
   return (
     <div className="bg-white px-4 py-2 rounded-sm flex flex-row-reverse lg:flex-row gap-4">
       <div className="relative w-40 h-40 lg:w-32 lg:h-32 flex items-center justify-center lg:block">
@@ -48,7 +52,13 @@ const ProductCard = ({ product }) => {
             <Heart size={16} />
             <span className="text-sm">Move to Wishlist</span>
           </div>
-          <div className="flex items-center gap-1 text-gray-500 cursor-pointer">
+          <div
+            onClick={() => {
+              const res = removeItemFromCart(product._id);
+              toast.success(res.message);
+            }}
+            className="flex items-center gap-1 text-gray-500 cursor-pointer"
+          >
             <Trash size={16} />
             <span className="text-sm">Remove</span>
           </div>

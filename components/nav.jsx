@@ -72,10 +72,12 @@ const Navbar = () => {
                   <Heart size={16} />
                 </div>
               </Link>
-              <div className="flex items-center space-x-1 pr-2 cursor-pointer text-sm">
-                <span>Cart</span>
-                <ShoppingCart size={16} />
-              </div>
+              <Link href="/checkout">
+                <div className="flex items-center space-x-1 pr-2 cursor-pointer text-sm">
+                  <span>Cart</span>
+                  <ShoppingCart size={16} />
+                </div>
+              </Link>
             </nav>
           </div>
         </div>

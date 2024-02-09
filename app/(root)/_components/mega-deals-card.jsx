@@ -23,7 +23,7 @@ const MegaDealsCard = ({ product }) => {
             className="bg-white rounded-full cursor-pointer p-2"
             onClick={() => {
               const res = addItemToCart(product);
-              toast.info(res.message)
+              toast.message(res.message)
             }}
           >
             <ShoppingCart size={20} />

@@ -5,9 +5,13 @@ import EMI from "@/components/icons/emi";
 import StarFill from "@/components/icons/star-fill";
 import { StarIcon } from "lucide-react";
 import Image from "next/image";
+import { useCartStore } from "@/zustand/cart";
+import { toast } from "sonner";
 
 const Product = ({ product }) => {
   const [imageUrl, setImageURL] = useState(product.images[0]);
+
+  const { addItemToCart } = useCartStore();
 
   return (
     <section className="text-gray-600 overflow-hidden p-4">
@@ -41,9 +45,9 @@ const Product = ({ product }) => {
           {/* product description */}
           <div className="w-full flex flex-col lg:flex-row pb-4 lg:pr-4">
             <div className="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 className="text-sm title-font text-gray-500 tracking-widest">
+              {/* <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 Apple
-              </h2>
+              </h2> */}
               <h1 className="text-gray-900 text-3xl title-font font-mediflex-1 mb-1">
                 {product.name}
               </h1>
@@ -146,7 +150,13 @@ const Product = ({ product }) => {
                   </div>
                 </div>
                 <div className="w-full text-center">
-                  <button className="w-full font-semibold text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                  <button
+                    onClick={() => {
+                      const res = addItemToCart(product);
+                      toast.message(res.message);
+                    }}
+                    className="w-full font-semibold text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+                  >
                     Add to Cart
                   </button>
                 </div>
