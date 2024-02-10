@@ -4,45 +4,7 @@ import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "./product-card";
 import Link from "next/link";
 
-const BrowseProductSection = () => {
-  const arr = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-  ];
+const BrowseProductSection = ({products}) => {
 
   return (
     <div className="bg-gray-50">
@@ -97,8 +59,8 @@ const BrowseProductSection = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-2">
-          {arr.map((item, index) => (
-            <ProductCard key={index} />
+          {products.map((item, index) => (
+            <ProductCard key={index} product={item} />
           ))}
         </div>
         {/* pagination */}
